@@ -5,10 +5,10 @@
            review="review.lineageos.org" />
 
 <project name="EnesSastim/android_device_xiaomi_jason" path="device/EnesSastim-jason"    revision="pixel-p" remote="github" />
-<project name="sdm660/vendor_xiaomi" path="vendor/sdm660-xiaomi"    revision="aex-p" remote="github" />
+<project name="sdm660/proprietary_vendor_xiaomi" path="vendor/sdm660-proprietary_xiaomi"    revision="aex-p" remote="github" />
 <project name="EnesSastim/android_kernel_xiaomi_jason" path="kernel/EnesSastim-jason"    revision="lineage-16.0" remote="github" />
 
-<project name="xiaomi-pie-device/android_device_xiaomi_jason" path="device/xiaomi-pie-device-jason"    revision="pixel-p" remote="github" />
 <project name="twistloop/android_kernel_twistloop_jason" path="kernel/twistloop-jason"    revision="lineage-16.0" remote="github" />
 <project name="sdm660/vendor_xiaomi_jason" path="vendor/sdm660-jason"    revision="aex-p" remote="github" />
+<project name="sdm660/device_xiaomi_jason" path="device/sdm660-jason-aosip"    revision="aosip" remote="github" />
 </manifest>
