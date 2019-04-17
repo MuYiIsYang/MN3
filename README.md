@@ -1,0 +1,26 @@
+# 安装Beyond Compare 4
+
+# 破解
+sudo sed -i "s/keexjEP3t4Mue23hrnuPtY4TdcsqNiJL-5174TsUdLmJSIXKfG2NGPwBL6vnRPddT7tH29qpkneX63DO9ECSPE9rzY1zhThHERg8lHM9IBFT+rVuiY823aQJuqzxCKIE1bcDqM4wgW01FH6oCBP1G4ub01xmb4BGSUG6ZrjxWHJyNLyIlGvOhoY2HAYzEtzYGwxFZn2JZ66o4RONkXjX0DF9EzsdUef3UAS+JQ+fCYReLawdjEe6tXCv88GKaaPKWxCeaUL9PejICQgRQOLGOZtZQkLgAelrOtehxz5ANOOqCaJgy2mJLQVLM5SJ9Dli909c5ybvEhVmIC0dc9dWH+/N9KmiLVlKMU7RJqnE+WXEEPI1SgglmfmLc1yVH7dqBb9ehOoKG9UE+HAE1YvH1XX2XVGeEqYUY-Tsk7YBTz0WpSpoYyPgx6Iki5KLtQ5G-aKP9eysnkuOAkrvHU8bLbGtZteGwJarev03PhfCioJL4OSqsmQGEvDbHFEbNl1qJtdwEriR+VNZts9vNNLk7UGfeNwIiqpxjk4Mn09nmSd8FhM4ifvcaIbNCRoMPGl6KU12iseSe+w+1kFsLhX+OhQM8WXcWV10cGqBzQE9OqOLUcg9n0krrR3KrohstS9smTwEx9olyLYppvC0p5i7dAx2deWvM1ZxKNs0BvcXGukR+/g" /usr/lib/beyondcompare/BCompare
+
+# 证书，需要图形界面下操作注册
+cat << EOF >bcompare.lic
+--- BEGIN LICENSE KEY ---
+elDqpGNn-NC03Dd0EySEESX1WMYF2vvXeUP0gHaJpCawrzXkc4c6qOAN6WmqOrz+fiFttlck3Q6PRqMSObKfaMWgOsG4vyousWavXpTWaaVQaiBvCMWL0c22ySnprd1202RAwYQ2d+gUbMk6i2HxDA165SyxwIPEq6St+a0OQ9Q4biFHqXGAiQK7oPLdG+98yboKsIu8VhtQbnlQTQJgjMCdmv82Yz30zZvTuWqd1UVsGyyx1YTskk1Asp6CDLw7i0JJ0JGRa8LrUrFFOLFvomGNNgcNFYhTuFq8H8ARELspOjtLvGTXHKTPwXkfHs4tLrJuXT-X8EtTAPEZqcuWHU++
+--- END LICENSE KEY -----
+EOF
+
+
+我最近全新安装了一次18.04，最小化安装的。
+然后第一件事就是装SSR，发现之前都能用现在怎么不行了。
+配置什么的一切正常，其实是python没设置好。
+因为默认装的是python3，然后终端输入python会提示没安装，其实已经安了，只是没有链接命令而已。
+sudo ln -s /usr/bin/python3 /usr/bin/python
+搞定！重启一下electron-ssr和浏览器，根本不需要任何插件和浏览器设置，系统设置里的网络代理保持自动模式即可。
+
+
+
+	
+export http_proxy="http://127.0.0.1:12333"
+export https_proxy="http://127.0.0.1:12333"
+
